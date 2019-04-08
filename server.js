@@ -6,7 +6,7 @@ var cheerio = require("cheerio");
 
 var db = require("./models");
 
-var PORT = 3000;
+var PORT = 8080;
 
 var app = express();
 
@@ -31,6 +31,9 @@ app.get("/scrape", function(req, res) {
 
       newsResult.title = $(this)
         .children("a")
+        .text();
+      newsResult.summary = $(this)
+        .children("time")
         .text();
       newsResult.link = $(this)
         .children("a")

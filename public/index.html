@@ -6,7 +6,23 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <style>
-      body { background-color: #7CFDFF }
+      body { 
+        background-color: #7CFDFF 
+      }
+      .header {
+        background-image: url("https://www.musikverein-beuren.de/assets/components/phpthumbof/cache/6277209256_934f20da10_b.674b340922649564d8586f74c815f552.jpg");
+        background-repeat: no-repeat;
+        height: 400px;
+        width: 1020px;
+        padding-top: 30px;
+      }
+      .read-text {
+        background-color: rgba(255, 255, 255, .5);
+        width: 950px;
+        margin-bottom: 25px;
+        /* display: flex;
+        align-self: center; */
+      }
       #wrapper {
         width: 960px;
         margin-left: auto;
@@ -46,13 +62,15 @@
   </head>
   <body>
     <div id="wrapper">
-      <div class="container">
+      <div class="container header">
+        <div class="read-text">
         <div class="row d-flex justify-content-center">
           <h1>All the News That's Fit to Scrape</h1>
         </div>
         <div class="row d-flex justify-content-center">
           <h2><i>Scrape all the news!</i></h2>
         </div>
+      </div>
 
         <div class="row d-flex justify-content-center">
           <button type="button" class="btn btn-info"><a href="/scrape">Scrape!</a></button>
