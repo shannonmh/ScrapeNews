@@ -6,7 +6,7 @@ var cheerio = require("cheerio");
 
 var db = require("./models");
 
-var PORT = 8080;
+var PORT = process.env.PORT ||  8080;
 
 var app = express();
 
@@ -33,7 +33,7 @@ app.get("/scrape", function(req, res) {
         .children("a")
         .text();
       newsResult.summary = $(this)
-        .children("time")
+        .parent("h2")
         .text();
       newsResult.link = $(this)
         .children("a")
@@ -48,7 +48,7 @@ app.get("/scrape", function(req, res) {
         });
     });
 
-    res.send("Scrape Complete! Go back to main page in the url to view the articles!");
+    res.send("New Scrape Complete! Go to main page in the url to view the articles!");
   });
 });
 

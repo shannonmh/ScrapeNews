@@ -11,10 +11,10 @@ var ArticleSchema = new Schema({
     type: String,
     required: true
   },
-  // summary: {
-  //   type: String,
-  //   required: false
-  // },
+  summary: {
+    type: String,
+    required: false
+  },
   note: {
     type: Schema.Types.ObjectId,
     ref: "Note"
